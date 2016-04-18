@@ -42,7 +42,8 @@ module Cybersourcery
         bill_to_address_line2: 'Street Address (line 2)',
         bill_to_address_city: 'City',
         bill_to_address_state: 'State (Province)',
-        bill_to_address_postal_code: 'Zip (Postal Code)'
+        bill_to_address_postal_code: 'Zip (Postal Code)',
+        bill_to_address_country: 'Country'
       }
       labels[field]
     end

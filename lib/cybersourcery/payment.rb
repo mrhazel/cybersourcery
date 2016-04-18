@@ -10,7 +10,7 @@ module Cybersourcery
 
     attr_reader :signer, :profile, :params, :errors
     attr_accessor :bill_to_forename, :bill_to_surname, :card_number, :card_expiry_date,
-                  :card_expiry_month, :card_expiry_year, :card_type,
+                  :card_expiry_month, :card_expiry_year, :card_type, :card_expiry_dummy,
                   :bill_to_email, :bill_to_address_line1, :bill_to_address_line2,
                   :bill_to_address_city, :bill_to_address_state, :bill_to_address_postal_code
     validates_presence_of :bill_to_forename, :bill_to_surname, :card_number, :card_expiry_date,
@@ -21,6 +21,9 @@ module Cybersourcery
     # To keep ActiveModel::Conversion happy
     def persisted?
       false
+    end
+
+    def card_expiry_dummy
     end
 
     def initialize(signer, profile, params)
